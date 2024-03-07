@@ -1,0 +1,6 @@
+<div *ngIf="comida">
+  <h1>{{ comida?.name }}</h1>
+  <img src="{{ comida?.image }}" alt="{{ comida?.name }}" srcset="" />
+  <p>{{ comida?.description }}</p>
+</div>
+<h1 class="text-danger" *ngIf="!comida">No existe esa comida</h1>

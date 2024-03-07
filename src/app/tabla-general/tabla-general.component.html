@@ -1,0 +1,24 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Imagen</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let comida of comidas">
+      <th scope="row">{{ comida.id }}</th>
+      <td>{{ comida.name }}</td>
+      <td>
+        <img src="{{ comida.image }}" alt="{{ comida.name }}" srcset="" />
+      </td>
+      <td>
+        <a class="btn btn-primary" [routerLink]="['/comida/' + comida.id]"
+          >Ver</a
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>
